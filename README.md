@@ -48,58 +48,13 @@ I recommend downloading Node Version Manager (NVM) first and then downloading No
 Then you will need to fork a copy of this repository to your Github account and then you can use the git clone command to clone your forked copy to your local environment and then you will need to download the following dependencies:
 
 
-### Webpack
-```
-npm install --save-dev webpack webpack-cli
-```
+### Install all dependencies 
 
-
-**Webpack Local Server**
+Run the following command to install all necessary dependencies.
 ```
-npm install --save-dev html-loader
+npm install
 ```
 
-
-**HTML Plugin**
-```
-npm install --save-dev html-webpack-plugin
-```
-
-
-**HTML Loader**
-```
-npm install --save-dev html-loader
-```
-
-
-**CSS-Loader**
-```
-npm install --save-dev style-loader css-loader
-
-```
-For a more detailed guide on installing and working with Webpack see : https://webpack.js.org/guides/installation/
-
-
-
-### Jest & Babel (Optional)
-
-One aim of this project was to practice implementing test-driven development when writing the game logic. Jest was the assigned testing framework for this project, and was utilized to write tests when developing the gameLogic.js module. 
-
-If you wish to run, or write additional tests you will need to download Jest & Babel:
-
-Install the latest version of Jest:
-
-```
-npm init jest@latest
-``` 
-
-Then install Babel with
-
-```
-npm install --save-dev babel-jest @babel/core @babel/preset-env
-```
-
-For a more detailed guide to downloading and working with Jest see: https://jestjs.io/docs/getting-started
 
 
 ### Local Server
