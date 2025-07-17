@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+<script defer src="main.js"></script></head>
+<body>
+    <header>
+        <div class="header-text">
+            <h1>Choose How Many Players</h1>
+        </div>
+    </header>
+
+    <!-- SELECT PLAYERS SCREEN-->
+    <div class="select-players-screen"> <!--Choose-player-->
+        <div class="select-players-btns-container">
+            <button class="btn-one-player-game">1 Player</button> <!--btn-one-players-->
+            <button class="btn-two-player-game">2 Players</button><!-- btn-two-players -->
+        </div>
+    </div>
+
+    <!--PLACE SHIPS SCREEN-->
+    <div class="place-ships-screen">
+
+        <!-- PLAYER ONE SCREEN-->
+        <div class="placement placement-player-one">
+            <div class="names player-one-name"><h2>Player One Place Your Ships!</h2></div>
+            <div class="placement-display">
+                <div class="placement-layout">
+                    <div class="x-axis">
+                        <div class="letter x-blank"><div></div></div>
+                        <div class="letter"><div>A</div></div>
+                        <div class="letter"><div>B</div></div>
+                        <div class="letter"><div>C</div></div>
+                        <div class="letter"><div>D</div></div>
+                        <div class="letter"><div>E</div></div>
+                        <div class="letter"><div>F</div></div>
+                        <div class="letter"><div>G</div></div>
+                        <div class="letter"><div>H</div></div>
+                        <div class="letter"><div>I</div></div>
+                        <div class="letter"><div>J</div></div>
+                    </div>
+                    <div class="placement-y-axis">
+                        <div class="y-axis">
+                            <div class="number"><div>1</div></div>
+                            <div class="number"><div>2</div></div>
+                            <div class="number"><div>3</div></div>
+                            <div class="number"><div>4</div></div>
+                            <div class="number"><div>5</div></div>
+                            <div class="number"><div>6</div></div>
+                            <div class="number"><div>7</div></div>
+                            <div class="number"><div>8</div></div>
+                            <div class="number"><div>9</div></div>
+                            <div class="number"><div>10</div></div>
+                        </div>
+                        <div class="placement-boards placement-boards-player-one"></div>
+                    </div>
+                    <div class="ships-submit">
+                        <button class="ships-submit-btn ships-submit-player-one">Submit</button>
+                    </div>
+                </div>
+                <!-- SHIP BUTTONS PARENT DIV -->
+                <div class="ship-buttons-one">
+                    <button class="aircraftCarrier ship ship-one" draggable="true">Aircraft Carrier</button>
+                    <button class="battleship ship ship-one" draggable="true">Battleship</button>
+                    <button class="cruiser ship ship-one" draggable="true">Cruiser</button>
+                    <button class="submarine ship ship-one" draggable="true">Submarine</button>
+                    <button class="destroyer ship ship-one" draggable="true">Destroyer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PLAYER TWO SCREEN-->
+        <div class="placement placement-player-two">
+            <div class="names player-two-name"><h2>Player Two Place Your Ships!</h2></div>
+            <div class="placement-display">
+                <div class="placement-layout">
+                    <div class="x-axis">
+                        <div class="letter"><div></div></div>
+                        <div class="letter"><div>A</div></div>
+                        <div class="letter"><div>B</div></div>
+                        <div class="letter"><div>C</div></div>
+                        <div class="letter"><div>D</div></div>
+                        <div class="letter"><div>E</div></div>
+                        <div class="letter"><div>F</div></div>
+                        <div class="letter"><div>G</div></div>
+                        <div class="letter"><div>H</div></div>
+                        <div class="letter"><div>I</div></div>
+                        <div class="letter"><div>J</div></div>
+                    </div>
+                    <div class="placement-y-axis">
+                        <div class="y-axis">
+                            <div class="number"><div>1</div></div>
+                            <div class="number"><div>2</div></div>
+                            <div class="number"><div>3</div></div>
+                            <div class="number"><div>4</div></div>
+                            <div class="number"><div>5</div></div>
+                            <div class="number"><div>6</div></div>
+                            <div class="number"><div>7</div></div>
+                            <div class="number"><div>8</div></div>
+                            <div class="number"><div>9</div></div>
+                            <div class="number"><div>10</div></div>
+                        </div>
+                        <div class="placement-boards placement-boards-player-two"></div>
+                    </div>
+                    <div class="ships-submit">
+                        <button class="ships-submit-btn ships-submit-player-two">Submit</button>
+                    </div>
+                </div>
+                <!-- SHIP BUTTONS PARENT DIV -->
+                <div class="ship-buttons-two">
+                    <button class="aircraftCarrier ship ship-two" draggable="true">Aircraft Carrier</button>
+                    <button class="battleship ship ship-two" draggable="true">Battleship</button>
+                    <button class="cruiser ship ship-two" draggable="true">Cruiser</button>
+                    <button class="submarine ship ship-two" draggable="true">Submarine</button>
+                    <button class="destroyer ship ship-two" draggable="true">Destroyer</button>
+                </div> 
+            </div>
+        </div>
+    </div> 
+
+    <!-- PLAY ROUND SCREENS-->
+    <div class="game-screen">
+        <!--Player One's board-->
+        <div class="game game-player-one">
+            <div class="players player-one">
+                <div class="game-header">
+                    <div class="names player-one-name"><h2>Player One</h2></div>
+                    <div class="notices player-one-notice"></div>
+                </div>
+                <div class="game-boards">
+                    <div>
+                        <h3>Attacks</h3>
+                        <div class="x-axis">
+                            <div class="letter"><div></div></div>
+                            <div class="letter"><div>A</div></div>
+                            <div class="letter"><div>B</div></div>
+                            <div class="letter"><div>C</div></div>
+                            <div class="letter"><div>D</div></div>
+                            <div class="letter"><div>E</div></div>
+                            <div class="letter"><div>F</div></div>
+                            <div class="letter"><div>G</div></div>
+                            <div class="letter"><div>H</div></div>
+                            <div class="letter"><div>I</div></div>
+                            <div class="letter"><div>J</div></div>
+                        </div>
+                        <div class="boards-y-axis">
+                            <div class="y-axis">
+                                <div class="number"><div>1</div></div>
+                                <div class="number"><div>2</div></div>
+                                <div class="number"><div>3</div></div>
+                                <div class="number"><div>4</div></div>
+                                <div class="number"><div>5</div></div>
+                                <div class="number"><div>6</div></div>
+                                <div class="number"><div>7</div></div>
+                                <div class="number"><div>8</div></div>
+                                <div class="number"><div>9</div></div>
+                                <div class="number"><div>10</div></div>
+                            </div>
+                            <div class="boards player-one-board"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Your Ships</h3>
+                        <div class="x-axis">
+                            <div class="letter"><div></div></div>
+                            <div class="letter"><div>A</div></div>
+                            <div class="letter"><div>B</div></div>
+                            <div class="letter"><div>C</div></div>
+                            <div class="letter"><div>D</div></div>
+                            <div class="letter"><div>E</div></div>
+                            <div class="letter"><div>F</div></div>
+                            <div class="letter"><div>G</div></div>
+                            <div class="letter"><div>H</div></div>
+                            <div class="letter"><div>I</div></div>
+                            <div class="letter"><div>J</div></div>
+                        </div>
+                        <div class="ships-y-axis">
+                            <div class="y-axis">
+                                <div class="number"><div>1</div></div>
+                                <div class="number"><div>2</div></div>
+                                <div class="number"><div>3</div></div>
+                                <div class="number"><div>4</div></div>
+                                <div class="number"><div>5</div></div>
+                                <div class="number"><div>6</div></div>
+                                <div class="number"><div>7</div></div>
+                                <div class="number"><div>8</div></div>
+                                <div class="number"><div>9</div></div>
+                                <div class="number"><div>10</div></div>
+                            </div>
+                            <div class="ships player-one-ships"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-submit">
+                    <button class="end-round end-player-one">Pass</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Player Two's board-->
+        <div class="game game-player-two">
+            <div class="players player-two">
+                <div class="game-header">
+                    <div class="names player-two-name"><h2>Player Two</h2></div>
+                    <div class="notices player-two-notice"></div>
+                </div>
+                <div class="game-boards">
+                    <div>
+                        <h3>Attacks</h3>
+                        <div class="x-axis">
+                            <div class="letter"><div></div></div>
+                            <div class="letter"><div>A</div></div>
+                            <div class="letter"><div>B</div></div>
+                            <div class="letter"><div>C</div></div>
+                            <div class="letter"><div>D</div></div>
+                            <div class="letter"><div>E</div></div>
+                            <div class="letter"><div>F</div></div>
+                            <div class="letter"><div>G</div></div>
+                            <div class="letter"><div>H</div></div>
+                            <div class="letter"><div>I</div></div>
+                            <div class="letter"><div>J</div></div>
+                        </div>
+                        <div class="boards-y-axis">
+                            <div class="y-axis">
+                                <div class="number"><div>1</div></div>
+                                <div class="number"><div>2</div></div>
+                                <div class="number"><div>3</div></div>
+                                <div class="number"><div>4</div></div>
+                                <div class="number"><div>5</div></div>
+                                <div class="number"><div>6</div></div>
+                                <div class="number"><div>7</div></div>
+                                <div class="number"><div>8</div></div>
+                                <div class="number"><div>9</div></div>
+                                <div class="number"><div>10</div></div>
+                            </div>
+                            <div class="boards player-two-board"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Your Ships</h3>
+                        <div class="x-axis">
+                            <div class="letter"><div></div></div>
+                            <div class="letter"><div>A</div></div>
+                            <div class="letter"><div>B</div></div>
+                            <div class="letter"><div>C</div></div>
+                            <div class="letter"><div>D</div></div>
+                            <div class="letter"><div>E</div></div>
+                            <div class="letter"><div>F</div></div>
+                            <div class="letter"><div>G</div></div>
+                            <div class="letter"><div>H</div></div>
+                            <div class="letter"><div>I</div></div>
+                            <div class="letter"><div>J</div></div>
+                        </div>
+                        <div class="ships-y-axis">
+                            <div class="y-axis">
+                                <div class="number"><div>1</div></div>
+                                <div class="number"><div>2</div></div>
+                                <div class="number"><div>3</div></div>
+                                <div class="number"><div>4</div></div>
+                                <div class="number"><div>5</div></div>
+                                <div class="number"><div>6</div></div>
+                                <div class="number"><div>7</div></div>
+                                <div class="number"><div>8</div></div>
+                                <div class="number"><div>9</div></div>
+                                <div class="number"><div>10</div></div>
+                            </div>
+                            <div class="ships player-two-ships"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-submit">
+                    <button class="end-round end-player-two">Pass</button>
+                </div>
+            </div>
+        </div> 
+        
+        <!--Intermediate Start Screen-->
+        <div class="start-round">
+            <button class="start-round-btn">Start</button>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+     <div class="modal">
+        <div class="modal-content">
+            <div class="modal-notice">Test Text</div>
+            <button class="modal-btn">Okay</button>
+        </div>
+     </div>
+
+
+    <footer><span>Copyright 2025 Sara Toth</span></footer>
+</body>
+</html>
