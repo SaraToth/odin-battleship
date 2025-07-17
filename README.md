@@ -56,7 +56,6 @@ npm install
 ```
 
 
-
 ### Local Server
 
 After sucessfully cloning the repository, in order to launch the program locally you will need to run the webpack server using the command
